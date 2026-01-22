@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="header">
+    <h2>Employee Management</h2>
+  </div>
+
+  <div class="top-items">
+    <div class="left">
+      <button class="add-employee">Add Employee</button>
+    </div>
+    <div class="right">
+      <input type="text" placeholder="search...." class="search-box" />
+      <button class="search">Search</button>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="form">
+        <form id="employee-form">
+          <div class="form-heading">
+            <h1>Add / Edit Post</h1>
+          </div>
+
+          <div class="input-box">
+            <label for="id">ID</label>
+            <input type="number" placeholder="id" id="id" />
+          </div>
+          <div class="input-box">
+            <label for="first-name">Title</label>
+            <input type="text" placeholder="Title" id="first-name" />
+          </div>
+          <div class="input-box">
+            <label for="last-name">Body</label>
+            <input type="text" placeholder="Body" id="last-name" />
+          </div>
+          <div class="input-box">
+            <label for="full-name">User ID</label>
+            <input type="number" placeholder="User ID" id="full-name" />
+          </div>
+
+          <div class="submit-button">
+            <button class="cancel-button">Cancel</button>
+            <input type="submit" value="Submit" id="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th>Sr. NO</th>
+            <th>User ID</th>
+            <th>Post ID</th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #2c3e50;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header {
+  background: linear-gradient(135deg, #4a90e2, #1b6dd5);
+  padding: 20px 30px;
+  color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.header h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   MAIN LAYOUT
+=========================== */
+.top-items {
+  padding: 25px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* ===========================
+   BUTTONS & SEARCH
+=========================== */
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-employee {
+  padding: 12px 22px;
+  background: #1abc9c;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-employee:hover {
+  background: #16a085;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.search-box {
+  padding: 12px 15px;
+  width: 240px;
+  border: 1px solid #d1d9e6;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-box:focus {
+  border-color: #1b6dd5;
+  box-shadow: 0 0 8px rgba(27, 109, 213, 0.2);
+}
+
+.search {
+  padding: 12px 20px;
+  background: #1b6dd5;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search:hover {
+  background: #145aa8;
+}
+
+/* ===========================
+   TABLE STYLING
+=========================== */
+.table-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+thead {
+  background: #1b6dd5;
+  color: white;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr {
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:hover {
+  background: #f7f9ff;
+}
+
+tbody td {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.edit-button {
+  background: #f39c12;
+  color: white;
+}
+
+.delete-button {
+  background: #e74c3c;
+  color: white;
+  margin-left: 6px;
+}
+
+/* ===========================
+   MODAL STYLING
+=========================== */
+.modal {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px); /* Blur background */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.form {
+  width: 480px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   FORM STYLING
+=========================== */
+.form-heading h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d9e6;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #1b6dd5;
+  box-shadow: 0 0 8px rgba(27, 109, 213, 0.2);
+}
+
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cancel-button {
+  padding: 12px 20px;
+  border: 1px solid #d1d9e6;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancel-button:hover {
+  background: #f0f0f0;
+}
+
+.submit-button button[type="submit"] {
+  padding: 12px 22px;
+  border: none;
+  background: #1abc9c;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button button[type="submit"]:hover {
+  background: #16a085;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+  .right {
+    justify-content: center;
+  }
+  .search-box {
+    width: 180px;
+  }
+}
+
+@media (max-width: 700px) {
+  .form {
+    width: 90%;
+  }
+  table {
+    font-size: 12px;
+  }
+}
